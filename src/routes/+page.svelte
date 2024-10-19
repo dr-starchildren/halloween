@@ -18,7 +18,7 @@
 		{ name: 'Chainsaw', file: '04-chainsaw.mp3' },
 		{ name: 'Witch Laugh', file: '05-witch-laugh.mp3' },
 		{ name: 'Cat Hiss', file: '06-cat-hiss.mp3' },
-		{ name: 'Ghost Whispering', file: '07-ghost-whispering.mp3' },
+		{ name: 'Ghost Whispers', file: '07-ghost-whispering.mp3' },
 		{ name: 'Ghost scream', file: '08-ghost-scream.mp3' }
 	];
 
@@ -43,11 +43,9 @@
 
 <main>
 	<h1>Halloween Sound Player</h1>
-	<div>
+	<div class="buttons">
 		{#each sounds as sound}
-			<button class="halloween-button" onclick={() => loadAndPlay(sound.file)}
-				>Play {sound.name}</button
-			>
+			<button class="halloween-button" onclick={() => loadAndPlay(sound.file)}>{sound.name}</button>
 		{/each}
 	</div>
 	<button class="halloween-button" onclick={backgroundStartStop}
@@ -68,16 +66,27 @@
 		align-items: center;
 		margin: 0;
 	}
+	h1 {
+		font-size: 3rem;
+		margin-bottom: 2rem;
+		color: #ff7518; /* Halloween orange */
+	}
 
 	button {
-		margin: 0.5rem;
-		padding: 0.5rem 1rem;
-		font-size: 1rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.buttons {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		max-width: 1200px;
 	}
 
 	.halloween-button {
 		margin: 1rem;
-		padding: 1rem 2rem;
+		padding: 1rem 1rem;
 		font-size: 1.5rem;
 		color: #fff;
 		background: linear-gradient(145deg, #ff7518, #ff4500);
@@ -100,5 +109,30 @@
 	.halloween-button:active {
 		transform: scale(0.95); /* Reduce size slightly when clicked */
 		box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.4); /* Reduce shadow on click */
+	}
+
+	/* Responsive design for mobile screens */
+	@media (max-width: 768px) {
+		h1 {
+			font-size: 2.5rem;
+		}
+
+		.halloween-button {
+			padding: 0.8rem 1.5rem;
+			font-size: 1.2rem;
+			margin: 0.8rem;
+		}
+	}
+
+	@media (max-width: 480px) {
+		h1 {
+			font-size: 2rem;
+		}
+
+		.halloween-button {
+			padding: 0.6rem 1.2rem;
+			font-size: 1rem;
+			margin: 0.6rem;
+		}
 	}
 </style>

@@ -56,7 +56,11 @@
 <style>
 	main {
 		text-align: center;
-		background: linear-gradient(135deg, #2e003e, #000000); /* Purple to Black gradient */
+		background: linear-gradient(135deg, rgba(46, 0, 62, 0.8), rgba(0, 0, 0, 0.8)),
+			url('/spookyvine.webp');
+		background-size: cover; /* Ensure the image covers the entire background */
+		background-position: center;
+		background-repeat: no-repeat;
 		min-height: 100vh;
 		color: #f2f2f2; /* Light text color for contrast */
 		font-family: 'Creepster', cursive; /* Halloween-themed font */
@@ -89,8 +93,8 @@
 		padding: 1rem 1rem;
 		font-size: 1.5rem;
 		color: #fff;
-		background: linear-gradient(145deg, #ff7518, #ff4500);
-		border: 2px solid #ff7518;
+		background: linear-gradient(145deg, #320650ef, #584f4f);
+		border: 2px solid #1d2657e1;
 		border-radius: 8px;
 		box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
 		cursor: pointer;
@@ -100,7 +104,7 @@
 	}
 
 	.halloween-button:hover {
-		background: linear-gradient(145deg, #800080, #4b0082); /* Purple spooky gradient on hover */
+		background: linear-gradient(145deg, #800080, #50110ec5); /* Purple spooky gradient on hover */
 		border-color: #4b0082;
 		transform: scale(1.1); /* Slightly increase size on hover */
 		box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.7); /* Stronger shadow */

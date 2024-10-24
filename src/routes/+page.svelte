@@ -44,7 +44,7 @@
 <main>
 	<h1>Halloween Sound Player</h1>
 	<button class="halloween-button" onclick={backgroundStartStop}
-		>{#if !playing}Start{:else}Stop{/if} Background</button
+		>{#if !playing}Start{:else}Stop{/if} Background Music</button
 	>
 	<div class="buttons">
 		{#each sounds as sound}
